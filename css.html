@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery: Ejemplo 01</title>
+</head>
+<body>
+    <form action="">
+        <input id="userName" type="text">
+        <input id="userId" type="text">
+        <input id="userPhone" type="text">
+    </form>
+
+    <div id="azul"></div>
+    <div id="amarillo"></div>
+    <div id="rojo"></div>
+
+    <div id="gato"></div>
+    <div id="ratones"></div>
+    <div id="puerto"></div>
+
+    <div id="gato animal"></div>
+    <div id="perro animal"></div>
+    <div id="animal leon"></div>
+
+<script src="js/vendor/jquery.js"></script>
+<script>
+    $(function  ()
+    {
+        var userInfo = $("[id^='user']"); // que empiese con user
+        var colorInfo = $("[id!='rojo']"); // diferentes de rojo
+        var todoInfo = $("[id*='to']"); // que exista la cadena to
+        var toInfo = $("[id~='leon']"); //
+        console.log(userInfo.length);
+        console.log(colorInfo.length);
+        console.log(todoInfo.length);
+        console.log(toInfo.length);
+    });
+</script>
+</body>
+</html>

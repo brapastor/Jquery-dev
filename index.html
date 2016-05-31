@@ -5,7 +5,20 @@
     <title>Jquery: Ejemplo 01</title>
 </head>
 <body>
-<p>jshjshdj</p>
+
 <script src="js/vendor/jquery.js"></script>
+<script>
+    function readyFn ()
+    {
+        console.log("el documento esta listo a traves de una funcion nombrada");
+    };
+
+    $(document).ready(readyFn);
+
+    $(function  ()
+    {
+
+    })
+</script>
 </body>
 </html>
