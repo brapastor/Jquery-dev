@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery: Ejemplo 01</title>
+</head>
+<body>
+    <ul>
+        <li>Rojo</li>
+        <li>Amarillo</li>
+        <li>Azul</li>
+        <li>Verde</li>
+        <li>Plomo</li>
+    </ul>
+
+<script src="js/vendor/jquery.js"></script>
+<script>
+    $(function  ()
+    {
+       console.log($("li:even")); //pares
+       console.log($("li:odd")); //impares
+       console.log($("li:first")); //primer elemento
+       console.log($("li:last")); //ultimo elemento
+       console.log($("li:eq(3)")); //cuarta posicion
+       console.log($("li:gt(3)")); //indice superior a 2
+       console.log($("li:lt(3)")); //indice inferior a 3
+    });
+</script>
+</body>
+</html>
