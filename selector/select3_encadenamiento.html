@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selector encadenamiento</title>
+</head>
+<body>
+<h1>clase</h1>
+    <div id="content">
+        mesaje1
+        <h3>hola 1</h3>
+        <h3>hola 2</h3>
+        <h3>hola 3</h3>
+    </div>
+
+<script src="../js/vendor/jquery.js"></script>
+    <script>
+        $(function  ()
+        {
+            var select = $("#content").find("h3").eq(2).html("hola nuevo")
+            var h1 = $("h1").html("clase de encadenamiento numero 6");
+            var h2 = $("h1").html();
+            console.log(h2);
+        });
+    </script>
+</body>
+</html>

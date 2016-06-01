@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css con jquery</title>
+    <h1>Probar con este elemento</h1>
+</head>
+<body>
+
+
+<script src="../js/vendor/jquery.js"></script>
+<script>
+    $(function  ()
+    {
+        var h1 = $("h1").css("font-size");
+//        var h1 = $("h1").css("font-size","100px");
+//        var h1 = $("h1").css({
+//           'font-size': '100px',
+//            'color': 'red'
+//        });
+        var h1 = $("h1").css({
+            'font-size': '+=15px',
+            'padding-top': '+=20px'
+        });
+
+        console.log(h1);
+    });
+</script>
+</body>
+</html>
