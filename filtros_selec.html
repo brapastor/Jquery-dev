@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!--<form action="">
+        <input type="text">
+        <input type="hidden">
+        <input type="password">
+        <input type="radio">
+        <input type="reset">
+        <input type="submit">
+        <input type="image">
+        <input type="file">
+        <input type="checkbox">
+        <input type="reset">
+        <input type="button" value="hit me">
+
+        <button>Hit me too</button>
+
+        <select name="" id="">
+            <option>Floor 1</option>
+            <option>Floor 2</option>
+
+            <textarea cols="30" rows="10"></textarea>
+        </select>
+    </form>
+    -->
+
+   <!-- <form action="">
+        <input type="text" name="text1" style="display: none">
+        <input type="text" name="text3" style="display: block">
+    </form>
+    -->
+
+   <!-- <p>jenny smith</p>
+    <p>jennyjones</p>
+    <p>jim bob</p>
+
+    <div id="parte1">
+        <ul>
+            <li>
+                <p>texto1</p>
+            </li>
+            <li><p>texto2</p></li>
+            <li><p>texto3</p></li>
+        </ul>
+    </div>
+
+    <div id="parte2">
+        <ul>
+            <li>Parrafo</li>
+        </ul>
+    </div>
+
+    <div>
+        <p></p>
+        <p>something here</p>
+    </div>
+
+    <div id="empty">
+        <ul>
+            <li>children!</li>
+        </ul>
+    </div>
+    -->
+
+    <div>
+        <span id="rojo">rojo</span>
+        <span id="amarillo">amarillo</span>
+        <span id="azul">azul</span>
+        <span id="verde">verde</span>
+        <span id="marron">marron</span>
+    </div>
+
+    <div>
+        <span id="pollo">pollo</span>
+        <span id="conejo">conejo</span>
+        <span id="zorro">zorro</span>
+        <span id="mono">mono</span>
+        <span id="caballo">caballo</span>
+    </div>
+
+    <div>
+        <span id="hombre">hombre</span>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+//            var n1 = $("input").length;
+//            var n2 = $(":input").length;
+//            var n3= $("form>*").length;
+//            var n4= $(":text").length;
+//            var n5= $("input[type='text']").length;
+//            console.log(n1);
+//            console.log(n2);
+//            console.log(n3);
+//            console.log(n4);
+//            console.log(n5);
+
+//            Filtrado por visibilidad
+//            var numInv = $(":text:hidden").length;
+//            var numVis = $(":text:visible").length;
+//            console.log(numInv);
+//            console.log(numVis);
+
+//            FILTRADO POR CONTENIDO
+
+            var texto =$("p:contains('jenny')").length;
+            console.log(texto);
+
+            var hasDemo = $("div:has('p')").attr("id");
+            console.log(hasDemo);
+            
+            var selectorEmpty = $("p:empty").length;
+            console.log(selectorEmpty);
+
+            //FILTRADO POR RELACIONES
+            console.log($("div span:first-child"));
+            console.log($("div span:last-child"));
+            console.log($("div span:only-child"));
+            console.log($("div span:nth-child(2)"));
+            console.log($("div span:nth-child(even)"));
+
+
+        });
+    </script>
+</body>
+</html>
