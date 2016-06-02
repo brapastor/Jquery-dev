@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eventos</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Perro</li>
+        <li>Gato</li>
+        <li>Raton</li>
+    </ul>
+
+    <button id="agregar">No puede dar click</button>
+    <button id="bind">Bind click</button>
+    <button id="unbind">Unbind click</button>
+    <button style="display: none">Click!</button>
+
+<script src="../js/vendor/jquery.js"></script>
+<script>
+
+    $(function  ()
+    {
+        function aClick ()
+        {
+            $("div").show().fadeOut("show");
+        }
+
+        $("#bind").click(function  ()
+        {
+            $("body").delegate("#agregar", "click", aClick);
+            $("#agregar").text("Puede dar click")
+        });
+
+        $("#unbind").click(function  ()
+        {
+            $("body").undelegate("#agregar", "click", aClick)
+            $("#agregar").text("no puede dar click");
+        })
+
+
+//        $("#myList").on('click', 'li', function (event)
+//        {
+//            console.log("realizado un evento");
+//            $("#myList").off('click')
+////            console.log(event.target);
+//        });
+
+
+//
+//            $("#myList").delegate('li', 'click', function  (event)
+//            {
+//                console.log(event.target);
+//            })
+    });
+</script>
+</body>
+</html>
