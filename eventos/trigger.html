@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trigger</title>
+</head>
+<body>
+    <p>Hacer prueba</p>
+<script src="../js/vendor/jquery.js"></script>
+<script>
+
+    $(function  ()
+    {
+        var foo = function (event)
+        {
+            if(event){
+                console.log("ocurrio un evetno");
+            }
+            else {
+                console.log("esta ejecucion no proviene de un evento");
+            }
+        }
+
+        $("p").click(foo);
+
+        $("p").trigger("click")
+    });
+</script>
+</body>
+</html>
