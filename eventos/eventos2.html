@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eventos</title>
+</head>
+<body>
+    <p>Hola jquery</p>
+    <span>
+        pagina de brayan
+        <a href="https://devcode.la" target="_blank">Dev code</a>
+    </span>
+
+<script src="../js/vendor/jquery.js"></script>
+<script>
+
+    $(function  ()
+    {
+        $('a').click(function(event)
+        {
+            event.preventDefault(); // canelar predeterminada del evento
+        });
+
+//        $("p").click(function (event)
+//        {
+////            console.log(event.pageX + " - " + event.pageY);
+////            console.log(event.type);
+////            console.log(event.wich);
+////            console.log(event.data);
+////            console.log(event.target);
+//
+//
+//        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eventos</title>
+</head>
+<body>
+    <p>Hola Jquery</p>
+    <p>Hola alumnos</p>
+    <span>contenido de respuestas</span>
+
+    <div id="aDiv" class="boxDiv">
+        Press me
+    </div>
+
+    <div id="bDiv" class="boxDiv">
+        Press me
+    </div>
+
+<script src="../js/vendor/jquery.js"></script>
+<script>
+
+
+    $(function  ()
+    {
+
+        //region multi eventos
+        $("p").on({
+            'click' : function  ()
+            {
+                console.log("clikeado");
+            },
+            'mouseover': function ()
+            {
+                console.log("pase el mouse");
+            }
+        })
+        //endregion
+
+
+        //region Desvincular evento
+//        $("p").on("click.myNamespace", function ()
+//        {
+//            console.log("hola evento 1");
+//            eliminarEvento();
+//        });
+//
+//        $("p").on("click", function()
+//        {
+//            console.log("hola evento 2");
+//        });
+//
+//        function eliminarEvento ()
+//        {
+//            $("p").off("click.myNamespace");
+//        }
+//
+//        endregion
+
+
+
+//        var i = 0;
+//        $("#aDiv").on("click",function ()
+//        {
+//            i++;
+//            console.log("Click on");
+//            if(i == 3){
+//                $("#aDiv").off("click");
+//            }
+//        });
+
+
+//        $("#bDiv").one("click", function ()
+//        {
+//            console.log("se ejecuta una vez");
+//        });
+
+//        vincular evento para que se ejecute una soal vez
+        
+
+//        $("#bDiv").bind("click",function ()
+//        {
+//            console.log("click 1");
+//        });
+//
+//        $("#bDiv").click(function  ()
+//        {
+//            console.log("hiciste un click");
+//        });
+
+
+
+
+
+
+//        $("p").bind("click", function ()
+//        {
+//            $("span").text("Click");
+//        });
+//
+//        $("p").bind("dblclick", function ()
+//        {
+//            $("span").text("Doble click")
+//        });
+//
+//        $("p").mouseout(function ()
+//        {
+//            $("span").text("mouseout");
+//        })
+//                .mouseover(function ()
+//                {
+//                    $("span").text("mouseover")
+//                });
+//
+//        var i = 0;
+//        $("#bDiv").on("click",function ()
+//        {
+//            console.log("hiciste click");
+//            i++;
+//            if(i == 2){
+//                $("#bDiv").off("click");
+//            }
+//        });
+
+
+    });
+</script>
+</body>
+</html>
